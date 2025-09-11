@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { openaiService, type ChatMessage as OpenAIChatMessage } from "./openai";
+import { aiService, type ChatMessage as AIChatMessage } from "./gemini";
 import { insertChatMessageSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -23,8 +23,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Get recent chat history for context
       const recentMessages = await storage.getChatMessages(10);
       
-      // Convert to OpenAI format for context
-      const openaiMessages: OpenAIChatMessage[] = recentMessages
+      // Convert to AI format for context
+      const aiMessages: AIChatMessage[] = recentMessages
         .slice(-6) // Keep last 3 exchanges for context
         .map(msg => ({
           role: msg.isUser ? 'user' : 'assistant',
@@ -32,7 +32,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }));
 
       // Generate AI response
-      const aiResponse = await openaiService.generateChatResponse(openaiMessages);
+      const aiResponse = await aiService.generateChatResponse(aiMessages);
 
       // Store AI response
       const aiMessage = await storage.createChatMessage({

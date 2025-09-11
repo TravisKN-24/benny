@@ -37,14 +37,14 @@ Preferred communication style: Simple, everyday language.
 ## Chat System Design
 - **Message Flow**: Real-time message exchange between user and AI with persistent storage
 - **Context Management**: Recent message history included in AI requests for conversational context
-- **Response Handling**: Graceful fallback responses when OpenAI API quota is exceeded
+- **Response Handling**: High-quality AI responses powered by Google Gemini with unlimited free usage
 - **UI Components**: Modular chat interface with message bubbles, typing indicators, and input handling
 
 # External Dependencies
 
 ## AI Services
-- **OpenAI API**: GPT-5 model integration for generating AI responses with configurable parameters
-- **Fallback System**: Intelligent pattern-matching responses when API limits are reached
+- **Google Gemini API**: Gemini 2.5-flash model integration providing unlimited free AI responses with excellent quality
+- **Fallback System**: Intelligent pattern-matching responses for error handling (rarely needed with Gemini's generous free tier)
 
 ## Database Services
 - **Neon Database**: Serverless PostgreSQL hosting with connection pooling and automatic scaling
