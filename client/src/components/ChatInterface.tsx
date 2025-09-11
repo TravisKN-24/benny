@@ -42,7 +42,7 @@ export default function ChatInterface() {
       return await response.json()
     },
     onSuccess: (data: any) => {
-      // Add both user and AI messages from the response
+      // Update the temporary user message with real ID and add AI response
       const userMessage: Message = {
         id: data.userMessage.id,
         text: data.userMessage.content,
@@ -57,7 +57,16 @@ export default function ChatInterface() {
         timestamp: new Date(data.aiMessage.timestamp),
       }
 
-      setMessages(prev => [...prev, userMessage, aiMessage])
+      // Replace the temp user message and add AI response
+      setMessages(prev => {
+        const newMessages = [...prev]
+        // Replace the last message (temp user message) with the real one
+        newMessages[newMessages.length - 1] = userMessage
+        // Add AI response
+        newMessages.push(aiMessage)
+        return newMessages
+      })
+      
       setIsTyping(false)
 
       // Invalidate history cache
@@ -66,6 +75,10 @@ export default function ChatInterface() {
     onError: (error: any) => {
       console.error('Chat error:', error)
       setIsTyping(false)
+      
+      // Remove the temporary user message on error
+      setMessages(prev => prev.slice(0, -1))
+      
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
@@ -75,6 +88,16 @@ export default function ChatInterface() {
   })
 
   const handleSendMessage = async (messageText: string) => {
+    // Show user message immediately
+    const tempId = Date.now().toString()
+    const userMessage: Message = {
+      id: tempId,
+      text: messageText,
+      isUser: true,
+      timestamp: new Date(),
+    }
+    
+    setMessages(prev => [...prev, userMessage])
     setIsTyping(true)
     sendMessageMutation.mutate(messageText)
   }

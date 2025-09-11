@@ -18,7 +18,7 @@ export class AIService {
         .map(msg => `${msg.role === 'user' ? 'User' : 'Benny'}: ${msg.content}`)
         .join('\n');
 
-      const systemPrompt = "You are Benny, a helpful and friendly AI assistant. Provide clear, concise, and helpful responses to user questions. Be conversational but informative.";
+      const systemPrompt = "You are Benny, a helpful AI assistant. Provide direct, natural responses without repetitive greetings or overly enthusiastic language. Just answer the question or respond naturally as if in a flowing conversation.";
       
       const fullPrompt = conversationHistory 
         ? `${systemPrompt}\n\nConversation:\n${conversationHistory}\n\nBenny:`
@@ -43,23 +43,23 @@ export class AIService {
     
     // Simple pattern matching for common queries
     if (lastMessage.includes('hello') || lastMessage.includes('hi')) {
-      return "Hello! I'm Benny, your AI assistant. I'm here to help with any questions you have!";
+      return "Hello! How can I help you?";
     }
     
     if (lastMessage.includes('how are you')) {
-      return "I'm doing well, thank you for asking! I'm ready to assist you with any questions or tasks you have.";
+      return "I'm doing well, thanks. What can I help with?";
     }
     
     if (lastMessage.includes('what') && lastMessage.includes('do')) {
-      return "I'm an AI assistant designed to help with various tasks like answering questions, providing information, helping with problem-solving, and having conversations. What would you like to know?";
+      return "I can help with questions, explanations, and various tasks. What do you need?";
     }
     
     if (lastMessage.includes('help')) {
-      return "I'd be happy to help! I can assist with general questions, explanations, and guidance. What specific topic would you like help with?";
+      return "Sure, what do you need help with?";
     }
     
     // Default fallback response
-    return `Thanks for your message! I received: "${messages[messages.length - 1]?.content}". I'm here to help - please feel free to ask me anything!`;
+    return `I received your message about "${messages[messages.length - 1]?.content}". How can I assist?`;
   }
 }
 
