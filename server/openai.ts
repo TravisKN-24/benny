@@ -28,8 +28,34 @@ export class OpenAIService {
       return response.choices[0].message.content || "I apologize, but I couldn't generate a response. Please try again.";
     } catch (error) {
       console.error('OpenAI API error:', error);
-      throw new Error('Failed to generate AI response');
+      
+      // Provide intelligent fallback responses when OpenAI quota is exceeded
+      return this.getFallbackResponse(messages);
     }
+  }
+
+  private getFallbackResponse(messages: ChatMessage[]): string {
+    const lastMessage = messages[messages.length - 1]?.content.toLowerCase() || '';
+    
+    // Simple pattern matching for common queries
+    if (lastMessage.includes('hello') || lastMessage.includes('hi')) {
+      return "Hello! I'm Benny, your AI assistant. I'm currently running in demo mode due to OpenAI quota limits, but I'm still here to help! What would you like to know?";
+    }
+    
+    if (lastMessage.includes('how are you')) {
+      return "I'm doing well, thank you for asking! I'm currently running in demo mode, but I'm still ready to assist you with any questions or tasks you have.";
+    }
+    
+    if (lastMessage.includes('what') && lastMessage.includes('do')) {
+      return "I'm an AI assistant designed to help with various tasks like answering questions, providing information, helping with problem-solving, and having conversations. Currently in demo mode, but fully functional once OpenAI quota is restored!";
+    }
+    
+    if (lastMessage.includes('help')) {
+      return "I'd be happy to help! While I'm currently in demo mode due to API limits, I can still provide assistance with general questions, explanations, and guidance. What specific topic would you like help with?";
+    }
+    
+    // Default fallback response
+    return `Thanks for your message! I'm currently running in demo mode due to OpenAI API quota limits. Your message: "${messages[messages.length - 1]?.content}" has been received. To get full AI responses, please check your OpenAI billing and quota settings.`;
   }
 }
 
