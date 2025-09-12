@@ -18,23 +18,6 @@ export default function ChatInterface() {
   const [isTyping, setIsTyping] = useState(false)
   const { toast } = useToast()
 
-  // Load chat history on mount
-  const { data: chatHistory } = useQuery<ApiMessage[]>({
-    queryKey: ['/api/chat/history'],
-    staleTime: 1000 * 60 * 5, // 5 minutes
-  })
-
-  useEffect(() => {
-    if (chatHistory && Array.isArray(chatHistory)) {
-      const formattedMessages: Message[] = chatHistory.map((msg: ApiMessage) => ({
-        id: msg.id,
-        text: msg.content,
-        isUser: msg.isUser,
-        timestamp: new Date(msg.timestamp),
-      }))
-      setMessages(formattedMessages)
-    }
-  }, [chatHistory])
 
   const sendMessageMutation = useMutation({
     mutationFn: async (message: string) => {
