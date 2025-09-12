@@ -41,21 +41,38 @@ export class AIService {
   private getFallbackResponse(messages: ChatMessage[]): string {
     const lastMessage = messages[messages.length - 1]?.content.toLowerCase() || '';
     
-    // Simple pattern matching for common queries
+    // Friendly fallback responses
     if (lastMessage.includes('hello') || lastMessage.includes('hi')) {
-      return "Hello! How can I help you?";
+      return "Hello! How can I help you today?";
     }
     
     if (lastMessage.includes('how are you')) {
-      return "I'm doing well, thanks. What can I help with?";
+      return "I'm doing well, thank you! What can I help you with today?";
     }
     
     if (lastMessage.includes('what') && lastMessage.includes('do')) {
-      return "I can help with questions, explanations, and various tasks. What do you need?";
+      return "I can answer questions, explain concepts, and help with a variety of tasks. What would you like to do?";
     }
     
     if (lastMessage.includes('help')) {
-      return "Sure, what do you need help with?";
+      return "Of course! What do you need help with?";
+    }
+    
+    if (
+      lastMessage.includes('who created you') ||
+      lastMessage.includes('who made you') ||
+      lastMessage.includes('who built you') ||
+      lastMessage.includes('who trained you')
+    ) {
+      // Randomize response for variety
+      const responses = [
+        "I was created and trained by Travis Keane.",
+        "Travis Keane is the developer behind Benny.",
+        "Benny was built and trained by Travis Keane.",
+        "My creator and trainer is Travis Keane.",
+        "I owe my existence to Travis Keane!"
+      ];
+      return responses[Math.floor(Math.random() * responses.length)];
     }
     
     // Default fallback response
