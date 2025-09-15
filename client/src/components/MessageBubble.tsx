@@ -66,7 +66,7 @@ export default function MessageBubble({ message, isUser, timestamp }: MessageBub
             <button
               onClick={async () => {
                 try {
-                  await navigator.clipboard.writeText(match[2])
+                  await navigator.clipboard.writeText(match![2])
                   setCopiedSnippet(snippetIndex)
                   setTimeout(() => setCopiedSnippet(null), 3000)
                 } catch (e) {}
