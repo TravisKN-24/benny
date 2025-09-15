@@ -66,11 +66,10 @@ export class AIService {
     ) {
       // Randomize response for variety
       const responses = [
-        "I was created and trained by Travis Keane.",
+        "I owe my existence to Travis Keane!",
         "Travis Keane is the developer behind Benny.",
         "Benny was built and trained by Travis Keane.",
         "My creator and trainer is Travis Keane.",
-        "I owe my existence to Travis Keane!"
       ];
       return responses[Math.floor(Math.random() * responses.length)];
     }
