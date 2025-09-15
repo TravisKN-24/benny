@@ -48,9 +48,7 @@ export default function MessageBubble({ message, isUser, timestamp }: MessageBub
               margin: "0.5em 0",
               maxWidth: "100%",
               boxSizing: "border-box",
-              overflowX: "auto",
-              background: "#18181b",
-              color: "#e4e4e7"
+              overflowX: "auto"
             }}
           >
             {match[2]}
@@ -66,10 +64,9 @@ export default function MessageBubble({ message, isUser, timestamp }: MessageBub
             }}
           >
             <button
-              onClick={async (e) => {
-                e.preventDefault();
+              onClick={async () => {
                 try {
-                  await navigator.clipboard.writeText(match![2] ?? "")
+                  await navigator.clipboard.writeText(match![2])
                   setCopiedSnippet(snippetIndex)
                   setTimeout(() => setCopiedSnippet(null), 3000)
                 } catch (e) {}
