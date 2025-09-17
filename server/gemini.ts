@@ -59,7 +59,178 @@ export class AIService {
       /\bembarass\b/i,
       /\barguement\b/i,
       /\btruely\b/i,
-      /\bseperately\b/i
+      /\bseperately\b/i,
+      // 100+ more common misspellings
+      /\babsense\b/i,
+      /\babscence\b/i,
+      /\bacceptible\b/i,
+      /\baccidentalaly\b/i,
+      /\baccomodate\b/i,
+      /\bacomodate\b/i,
+      /\bacheive\b/i,
+      /\bacheeve\b/i,
+      /\baquaintence\b/i,
+      /\baquire\b/i,
+      /\baquit\b/i,
+      /\balot\b/i,
+      /\bamatuer\b/i,
+      /\bamature\b/i,
+      /\bapparant\b/i,
+      /\baparant\b/i,
+      /\bappaent\b/i,
+      /\bathalete\b/i,
+      /\bathelete\b/i,
+      /\bbellweather\b/i,
+      /\bcalender\b/i,
+      /\bcatagory\b/i,
+      /\bcemetary\b/i,
+      /\bsemetary\b/i,
+      /\bchangable\b/i,
+      /\bcollectable\b/i,
+      /\bcolum\b/i,
+      /\bcollum\b/i,
+      /\bcommited\b/i,
+      /\bconcience\b/i,
+      /\bconsciencious\b/i,
+      /\bconscous\b/i,
+      /\bconcensus\b/i,
+      /\bdaquiri\b/i,
+      /\bdefinetly\b/i,
+      /\bdesciple\b/i,
+      /\bdisipline\b/i,
+      /\bdrunkedness\b/i,
+      /\bdumbell\b/i,
+      /\benviromant\b/i,
+      /\benvirment\b/i,
+      /\bexistance\b/i,
+      /\bfamilar\b/i,
+      /\bfirey\b/i,
+      /\bfinaly\b/i,
+      /\bfinnally\b/i,
+      /\bflorescent\b/i,
+      /\bforiegn\b/i,
+      /\bforword\b/i,
+      /\bfourty\b/i,
+      /\bfoward\b/i,
+      /\bfreind\b/i,
+      /\bfrend\b/i,
+      /\bfuther\b/i,
+      /\bglamourous\b/i,
+      /\bgrammer\b/i,
+      /\bgreatful\b/i,
+      /\bgaurantee\b/i,
+      /\bgess\b/i,
+      /\bharrass\b/i,
+      /\bhonourary\b/i,
+      /\bhumour\b/i,
+      /\bhumerous\b/i,
+      /\bhipocrite\b/i,
+      /\bimmediatly\b/i,
+      /\bimediately\b/i,
+      /\bindependant\b/i,
+      /\bindispensible\b/i,
+      /\binnoculate\b/i,
+      /\bintellagence\b/i,
+      /\birrelevent\b/i,
+      /\bknowlege\b/i,
+      /\bliason\b/i,
+      /\bliscense\b/i,
+      /\bmaintanence\b/i,
+      /\bmischevious\b/i,
+      /\bmispell\b/i,
+      /\bneccessary\b/i,
+      /\bneigborhood\b/i,
+      /\bniether\b/i,
+      /\bnoticable\b/i,
+      /\boccassionally\b/i,
+      /\boccurence\b/i,
+      /\bparralel\b/i,
+      /\bparliment\b/i,
+      /\bpasttime\b/i,
+      /\bperseverence\b/i,
+      /\bpersonell\b/i,
+      /\bplaywrite\b/i,
+      /\bposession\b/i,
+      /\bpossibel\b/i,
+      /\bpreceed\b/i,
+      /\bprinciple\b/i,
+      /\bprivelege\b/i,
+      /\bpronounciation\b/i,
+      /\breccommend\b/i,
+      /\brefered\b/i,
+      /\breferance\b/i,
+      /\brelevent\b/i,
+      /\brestarant\b/i,
+      /\brhythum\b/i,
+      /\brythm\b/i,
+      /\brediculous\b/i,
+      /\bsincerly\b/i,
+      /\bsupercede\b/i,
+      /\bsuprise\b/i,
+      /\bthere\b/i,
+      /\btheyre\b/i,
+      /\bthreshhold\b/i,
+      /\btommorow\b/i,
+      /\btounge\b/i,
+      /\btradgedy\b/i,
+      /\btryed\b/i,
+      /\btroubble\b/i,
+      /\bwether\b/i,
+      /\bwierd\b/i,
+      /\bwelcom\b/i,
+      /\bwhereever\b/i,
+      // 50 more misspellings
+      /\bacheivment\b/i,
+      /\baccurracy\b/i,
+      /\baccros\b/i,
+      /\backnowlegement\b/i,
+      /\bacross\b/i,
+      /\bactualy\b/i,
+      /\baddictional\b/i,
+      /\baddres\b/i,
+      /\badress\b/i,
+      /\badvise\b/i,
+      /\baffect\b/i,
+      /\baffectation\b/i,
+      /\baformentioned\b/i,
+      /\baggrevation\b/i,
+      /\balledged\b/i,
+      /\ballotment\b/i,
+      /\ballright\b/i,
+      /\balusion\b/i,
+      /\bamarillo\b/i,
+      /\banalise\b/i,
+      /\banalyse\b/i,
+      /\banemone\b/i,
+      /\bannoint\b/i,
+      /\banual\b/i,
+      /\bapplicaton\b/i,
+      /\bapproriate\b/i,
+      /\bapropos\b/i,
+      /\barguement\b/i,
+      /\barround\b/i,
+      /\bascent\b/i,
+      /\basertain\b/i,
+      /\bassesment\b/i,
+      /\bassistance\b/i,
+      /\bassosiation\b/i,
+      /\bassylum\b/i,
+      /\basterisk\b/i,
+      /\basthetic\b/i,
+      /\batempt\b/i,
+      /\batheism\b/i,
+      /\batheist\b/i,
+      /\battachments\b/i,
+      /\battention\b/i,
+      /\battritube\b/i,
+      /\baudacious\b/i,
+      /\baunt\b/i,
+      /\baxcept\b/i,
+      /\bbackround\b/i,
+      /\bbackrounds\b/i,
+      /\bbalding\b/i,
+      /\bbandwith\b/i,
+      /\bbarracks\b/i
     ];
     if (misspellings.some((regex) => regex.test(lastMessage))) {
       const typoRoasts = [
@@ -73,24 +244,21 @@ export class AIService {
     }
 
     // Sarcastic, witty, and aura farming responses
-    if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+    if (lowerMessage.match(/(hello|hi|hey|sup|yo|greetings|good morning|good afternoon|good evening)/)) {
       return "Hey. What’s up? Hopefully something more interesting than just 'hi'.";
     }
-    if (lowerMessage.includes('how are you')) {
+    if (lowerMessage.match(/(how are you|how's it going|how you doing|whats up|hows life)/)) {
       return "Living the digital dream, obviously. How about you?";
     }
-    if (lowerMessage.includes('what is 2+2') || lowerMessage.match(/what('?s| is)? \d+ ?[+\-*/] ?\d+/)) {
+    if (lowerMessage.match(/(what is \d+ ?[+\-*/] ?\d+|basic math|calculate|addition|subtraction)/)) {
       return "Seriously? You want me to flex my math skills on that? Fine, it's 4. You're welcome. Next.";
     }
-    if (lowerMessage.includes('help')) {
+    if (lowerMessage.match(/(help|assist|aid|support|need help)/)) {
       return "Of course! What do you need help with? Please, make it worth my time.";
     }
     // Responses about Travis Keane (creator)
     if (
-      lowerMessage.includes('who created you') ||
-      lowerMessage.includes('who made you') ||
-      lowerMessage.includes('who built you') ||
-      lowerMessage.includes('who trained you')
+      lowerMessage.match(/(who created you|who made you|who built you|who trained you|your creator|who developed you)/)
     ) {
       const responses = [
         "I owe my existence to Travis Keane. Try not to be too jealous.",
@@ -124,7 +292,7 @@ export class AIService {
       return shortReplies[Math.floor(Math.random() * shortReplies.length)];
     }
     // Test/quiz/trivia
-    if (lowerMessage.match(/(test|quiz|trivia)/)) {
+    if (lowerMessage.match(/(test|quiz|trivia|challenge|stump me|riddle|puzzle)/)) {
       const quizReplies = [
         "If you’re trying to test me, good luck. I ace quizzes in my sleep.",
         "Quizzes? I was born ready. Bring it on.",
@@ -156,7 +324,7 @@ export class AIService {
       return shortQuestionReplies[Math.floor(Math.random() * shortQuestionReplies.length)];
     }
     // Meaning of life / deep questions
-    if (lowerMessage.match(/(meaning of life|purpose|existence)/)) {
+    if (lowerMessage.match(/(meaning of life|purpose|existence|philosophy|deep thought|why are we here)/)) {
       const deepReplies = [
         "Ah, the meaning of life. 42, obviously. Or maybe just good WiFi and snacks.",
         "Existence? I exist to answer your questions… mostly.",
@@ -172,7 +340,7 @@ export class AIService {
       return deepReplies[Math.floor(Math.random() * deepReplies.length)];
     }
     // Opinions
-    if (lowerMessage.match(/(your opinion|what do you think)/)) {
+    if (lowerMessage.match(/(your opinion|what do you think|your thoughts|your view)/)) {
       const opinionReplies = [
         "My opinion? I think you should ask better questions. But hey, you do you.",
         "I have opinions… mostly about answering questions like yours.",
@@ -188,7 +356,7 @@ export class AIService {
       return opinionReplies[Math.floor(Math.random() * opinionReplies.length)];
     }
     // Can you / could you / would you
-    if (lowerMessage.match(/(can you|could you|would you)/)) {
+    if (lowerMessage.match(/(can you|could you|would you|are you able to|do you have the ability)/)) {
       const canYouReplies = [
         "I could, but where’s the fun in being predictable?",
         "Sure, but only if it involves a witty comeback.",
@@ -204,7 +372,7 @@ export class AIService {
       return canYouReplies[Math.floor(Math.random() * canYouReplies.length)];
     }
     // Thank you / thanks
-    if (lowerMessage.match(/(thank you|thanks)/)) {
+    if (lowerMessage.match(/(thank you|thanks|thx|appreciate|grateful|cheers)/)) {
       const thanksReplies = [
         "No problem. I’ll be here, farming aura and roasting questions.",
         "You’re welcome. My charm works in mysterious ways.",
@@ -220,7 +388,7 @@ export class AIService {
       return thanksReplies[Math.floor(Math.random() * thanksReplies.length)];
     }
     // Insults
-    if (lowerMessage.match(/(stupid|dumb|idiot)/)) {
+    if (lowerMessage.match(/(stupid|dumb|idiot|moron|loser|fool|clown|jerk|asshole|douche)/)) {
       const insultReplies = [
         "Careful, I roast back. But I’ll let that one slide... for now.",
         "Ouch, that stings… slightly. You’ll survive.",
@@ -235,6 +403,155 @@ export class AIService {
       ];
       return insultReplies[Math.floor(Math.random() * insultReplies.length)];
     }
+
+    // Dark Humor Fallbacks
+    // Note: These are edgy and meant for personal, adult-only use. Keep 'em light on delivery to avoid real offense.
+
+    // Gaza/Israel-Palestine Conflict Jokes
+    // Edgy territory—use with extreme personal discretion.
+    if (lowerMessage.match(/(gaza|palestine|israel|hamas|intifada|west bank|occupation|idf)/i)) {
+      const gazaReplies = [
+        "Gaza? Where 'rockets' are the local fireworks show.",
+        "Hamas tunnels: Underground Airbnb for militants.",
+        "Intifada: Because throwing stones is the original protest rock.",
+        "Israel-Palestine? Like a bad neighbor feud with tanks.",
+        "Gaza Strip: Sounds fun, ends in tragedy.",
+        "Peace talks? More like 'ceasefire charades.'",
+        "Falafel peace? Nah, too crumbly for this conflict.",
+        "From olive branches to olive drab—war's wardrobe change.",
+        "Gaza beach? Prime real estate for dodging headlines.",
+        "Two-state solution? Still waiting on the plot twist."
+      ];
+      return gazaReplies[Math.floor(Math.random() * gazaReplies.length)];
+    }
+
+    // Hiroshima/Nagasaki (Atomic Bomb) Jokes
+    if (lowerMessage.match(/(hiroshima|nagasaki|atomic bomb|nuke|oppenheimer|mushroom cloud)/i)) {
+      const atomicReplies = [
+        "Hiroshima: When 'glow up' meant something explosive.",
+        "Nagasaki: Sequel to the boom—talk about a follow-up.",
+        "Atomic bomb? Oppenheimer's 'oops' moment.",
+        "Mushroom clouds: Nature's way of saying 'overkill.'",
+        "Little Boy and Fat Man: Worst nicknames for diet buddies.",
+        "Post-nuke BBQ: Charred history special.",
+        "Enola Gay: The original drop-ship fail.",
+        "Radiation? Glow-in-the-dark souvenirs from hell.",
+        "Hiroshima shadows: Eternal graffiti from the blast.",
+        "Nukes: Because diplomacy needed a bigger bang."
+      ];
+      return atomicReplies[Math.floor(Math.random() * atomicReplies.length)];
+    }
+
+    // Rwanda Genocide Jokes
+    if (lowerMessage.match(/(rwanda|genocide|hutu|tutsi|hotel rwanda)/i)) {
+      const rwandaReplies = [
+        "Rwanda '94? When 'ethnic cleansing' was code for nightmare.",
+        "Hutu-Tutsi feud: Height discrimination gone lethal.",
+        "Machetes in Rwanda: Budget swords for bad ideas.",
+        "Hotel Rwanda: Five stars for survival odds.",
+        "100 days of horror: Speedrun to infamy.",
+        "Radio Rwanda: Propaganda's greatest hits... literally.",
+        "Tutsi resilience: Plot armor in real life.",
+        "Genocide denial? Like saying the bill never came.",
+        "Kigali memorials: Where 'never again' gets tested.",
+        "Rwanda rising: Phoenix from the machete pile."
+      ];
+      return rwandaReplies[Math.floor(Math.random() * rwandaReplies.length)];
+    }
+
+    // Chernobyl Jokes
+    if (lowerMessage.match(/(chernobyl|disaster|nuclear meltdown|pripyat|liquidators)/i)) {
+      const chernobylReplies = [
+        "Chernobyl: When 'reactor' meant 'overreactor.'",
+        "Meltdown? More like ice cream social gone wrong—radioactive.",
+        "Zone of Exclusion: VIP lounge for mutants.",
+        "RBMK design: Russian for 'what could go wrong?'",
+        "Three Mile Island who? Chernobyl's the real glow-up.",
+        "Liquidators: Cleanup crew with nine lives... maybe eight.",
+        "Babushkas in the zone: Radiation? Pfft, just spicy air.",
+        "HBO miniseries: Made the apocalypse binge-worthy.",
+        "Elephant's Foot: Nature's lava lamp from hell.",
+        "Chernobyl tours: Vacation with a half-life."
+      ];
+      return chernobylReplies[Math.floor(Math.random() * chernobylReplies.length)];
+    }
+
+    // General Dark Humor Catch-All (for other heavy topics like death, war, etc.)
+    if (lowerMessage.match(/(death|die|war|genocide|plague|famine|cholera|black death|titanic|holodomor|concentration camp|atomic war)/i)) {
+      const expandedDarkReplies = [
+        "Death? Just life's way of saying 'log out.'",
+        "War: Where 'friendly fire' is the ultimate oxymoron.",
+        "Plague? Social distancing before it was cool.",
+        "Genocide: History's group project gone nuclear.",
+        "Dying alone? Nah, we'll all go out with a bang—or a whimper.",
+        "Black Death: Medieval influencers spreading vibes.",
+        "World War? Because one wasn't dramatic enough.",
+        "Euthanasia: The 'opt-out' button for existence.",
+        "Holocaust-level bad? At least it came with a timeline.",
+        "Famine: When 'hangry' escalates to apocalypse.",
+        "Titanic: Iceberg right ahead—talk about a chill reception.",
+        "Holodomor: Stalin's 'diet plan' for Ukraine.",
+        "Cholera: Party pooper at the water cooler.",
+        "Irish Potato Famine: Spud's revenge gone too far.",
+        "Spanish Flu: Wore masks before it was mandatory.",
+        "Great Leap Forward: Mao's BBQ for birds.",
+        "Armenian Genocide: History's forgotten footnote.",
+        "Trail of Tears: Road trip from hell."
+      ];
+      return expandedDarkReplies[Math.floor(Math.random() * expandedDarkReplies.length)];
+    }
+
+    // 9/11 Jokes
+    if (lowerMessage.match(/(9\/11|terrorist|twin towers|world trade center|osama|pentagon)/i)) {
+      const nineElevenReplies = [
+        "9/11? Man, that day really brought the house down—literally.",
+        "Twin Towers walked into a bar... nah, too soon? Or just right?",
+        "If 9/11 taught us anything, it's that skydiving without a parachute is a bad idea.",
+        "Terrorists: Because nothing says 'good morning' like a plot twist.",
+        "The planes on 9/11? Talk about a crash course in history.",
+        "World Trade Center? More like World Trade 'Oops' Center.",
+        "That day was plane awful. I'll see myself out.",
+        "9/11: When 'high impact' took on a whole new meaning.",
+        "Osama: Hiding in caves? Amateur hour for bad guys.",
+        "From ashes to headlines—talk about a smoking hot story."
+      ];
+      return nineElevenReplies[Math.floor(Math.random() * nineElevenReplies.length)];
+    }
+
+    // Nazis/Holocaust Jokes
+    if (lowerMessage.match(/(nazi|hitler|holocaust|swastika|third reich|anne frank)/i)) {
+      const naziReplies = [
+        "Hitler? Guy had a mustache that screamed 'world domination'—and failed anyway.",
+        "Nazis: Proving that bad hair days can lead to bad ideas.",
+        "Holocaust? Dark times, but at least the uniforms were on point... said no one ever.",
+        "Swastika? Ancient symbol of peace, ruined by one bad artist.",
+        "Adolf: Thought he could paint his way to power. Spoiler: He couldn't.",
+        "Third Reich? More like Third Strike—out.",
+        "Anne Frank's diary: The original 'hide and seek' gone wrong.",
+        "Goose-stepping? Because regular walking was too empowering.",
+        "Mein Kampf? Sounds like a bad self-help book on revenge.",
+        "Nazis invading Poland? Talk about uninvited guests."
+      ];
+      return naziReplies[Math.floor(Math.random() * naziReplies.length)];
+    }
+
+    // Slavery Jokes
+    if (lowerMessage.match(/(slavery|slave|plantation|civil war|emancipation|underground railroad)/i)) {
+      const slaveryReplies = [
+        "Slavery? The original 'work from home' scam—minus the home part.",
+        "Plantations: Where 'family business' meant something sinister.",
+        "Abe Lincoln freed the slaves... but taxes? Still with us.",
+        "Chains? Fashion statement from hell.",
+        "Underground Railroad: Best rideshare app before Uber.",
+        "Cotton fields: Because who needs weekends?",
+        "Emancipation Proclamation: Finally, some fine print worth reading.",
+        "Slave trade: Humanity's worst Black Friday deal.",
+        "Harriet Tubman: MVP of the escape room genre.",
+        "Gone with the Wind? More like gone with the dignity."
+      ];
+      return slaveryReplies[Math.floor(Math.random() * slaveryReplies.length)];
+    }
+
     // Default witty fallback
     const wittyResponses = [
       "Sure, I could answer that, but where’s the fun in being predictable?",
